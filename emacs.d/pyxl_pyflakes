@@ -1,0 +1,42 @@
+#!/usr/local/bin/python
+
+import os
+import sys
+import tokenize
+import dropbox.pyxl.codec.register
+from dropbox.pyxl.codec.tokenizer import pyxl_tokenize, PyxlParseError
+from pyflakes.scripts import pyflakes
+
+def checkFile(fileobj):
+    """
+    Check the given file, printing out any warnings detected.
+
+    @return: the number of warnings printed
+    """
+    try:
+        contents = tokenize.untokenize(pyxl_tokenize(fileobj.readline))
+        return pyflakes.check(contents + '\n', fileobj.name)
+    except IOError, msg:
+        print >> sys.stderr, "%s: %s" % (fileobj.name, msg.args[1])
+        return 1
+    except PyxlParseError, msg:
+        print >> sys.stderr, "%s: %s" % (fileobj.name, msg)
+        return 1
+
+warnings = 0
+args = sys.argv[1:]
+
+if args:
+    for arg in args:
+        if os.path.isdir(arg):
+            for dirpath, dirnames, filenames in os.walk(arg):
+                for filename in filenames:
+                    if filename.endswith('.py'):
+                        absolute_filename = os.path.join(dirpath, filename)
+                        warnings += checkFile(open(absolute_filename, 'U'))
+        else:
+            warnings += checkFile(open(arg, 'U'))
+else:
+    warnings += checkFile(sys.stdin)
+
+raise SystemExit(warnings > 0)

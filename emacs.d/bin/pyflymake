@@ -1,0 +1,28 @@
+#!/bin/bash
+
+echo 'epylint...'
+pylint --output-format=parseable --reports=n --include-ids=y --disable=R0914,C0111,C0103,C0301,W0142 $1 2>/dev/null
+# R0914 Too many local variables
+# C0111 Missing docstring
+# C0103 Invalid name... should match [a-z_][a-z0-9_]{2,30}$
+# C0301 Line too long
+# W0142 Used * or ** magic
+
+echo 'pyflakes...'
+pyflakes $1
+pyxl_pyflakes
+
+echo 'pep8...'
+pep8 --ignore=E201,E221,E225,E251,E261,E301,E302,E501 --repeat $1
+# E201 whitespace after '('
+# E221 multiple spaces before operator
+# E225 missing whitespace around operator
+# E251 no spaces around keyword / parameter equals
+# E261 at least two spaces before inline comment
+# E301 Method definitions inside a class are separated by a single blank line
+# E302 expected 2 blank lines (between top-level function and class definitions)
+# E501 line too long
+
+# echo 'pychecker...'
+# pychecker $1
+true

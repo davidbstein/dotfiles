@@ -1,0 +1,11 @@
+echo 'pylint'
+epylint $@ | grep -v 'Used . or .. magic' | grep -v '\'map'\'
+
+echo 'pyflakes'
+pyflakes $@
+
+# echo  'pep8'
+# pep8 $@ | sed -r "s/:..?.?\: E/\: Warning \(W\)\: /g"
+
+echo 'pyxl-pyflakes'
+pyxl_pyflakes $@
