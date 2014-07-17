@@ -37,6 +37,10 @@
 (setq auto-mode-alist
       (cons '("\\.py\\'" . pyxl-mode) auto-mode-alist))
 
+(require 'go-mode)
+(setq auto-mode-alist
+      (cons '("\\.go\\'" . go-mode) auto-mode-alist))
+
 (setq auto-mode-alist
       (cons '("\\.scss\\'" . css-mode) auto-mode-alist))
 

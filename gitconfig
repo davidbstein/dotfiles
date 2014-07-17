@@ -1,3 +1,7 @@
 [user]
 	name = David Stein
 	email = davidbstein@gmail.com
+[alias]
+	k = log --oneline --graph --decorate
+[push]
+	default = current

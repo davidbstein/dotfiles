@@ -74,6 +74,8 @@ xterm*|rxvt*)
     ;;
 esac
 
+PS1="\[\e[38;5;212m\]\[\e[40;5;245m\]\u\[\e[00m\]@\[\e[33;5;172m\]\h\[\e[00m\]:\[\e[38;5;5m\]\w\[\e[00m\]> "
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -115,5 +117,6 @@ if ! shopt -oq posix; then
   fi
 fi
 [ -r /home/ubuntu/.byobu/prompt ] && . /home/ubuntu/.byobu/prompt   #byobu-prompt#
+cd /srv/livegrep
 
 byobu

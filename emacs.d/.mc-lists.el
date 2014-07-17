@@ -4,6 +4,7 @@
 (setq mc/cmds-to-run-for-all
       '(
         coffee-dedent-line-backspace
+        coffee-newline-and-indent
         dabbrev-expand
         indent-for-tab-command
         keyboard-escape-quit
