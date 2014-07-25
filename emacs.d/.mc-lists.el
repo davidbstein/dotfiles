@@ -3,9 +3,7 @@
 
 (setq mc/cmds-to-run-for-all
       '(
-        coffee-dedent-line-backspace
-        coffee-newline-and-indent
-        dabbrev-expand
+        go-mode-insert-and-indent
         indent-for-tab-command
         keyboard-escape-quit
         kill-region
@@ -19,6 +17,7 @@
 
 (setq mc/cmds-to-run-once
       '(
+        coffee-dedent-line-backspace
         delete-rectangle
         python-send-buffer
         static-kick
