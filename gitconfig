@@ -1,6 +1,6 @@
 [user]
-	name = David Stein
-	email = davidbstein@gmail.com
+	name = David Benjamin Stein
+	email = stein@dropbox.com
 [alias]
 	k = log --oneline --graph --decorate
 [push]

@@ -120,3 +120,5 @@ fi
 cd /srv/livegrep
 
 byobu
+. /home/vagrant/.ask_creds.sh
+. /home/analytics/virtualenv/bin/activate
