@@ -11,7 +11,7 @@ alias emacs='/usr/bin/emacs'
 alias less='less -r'
 
 ccat() {
-    pygmentize -g $1 | sl -ba
+    pygmentize -g $1 | ls -ba
 }
 
 gr() {
