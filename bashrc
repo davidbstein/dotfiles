@@ -117,7 +117,6 @@ if ! shopt -oq posix; then
   fi
 fi
 [ -r /home/ubuntu/.byobu/prompt ] && . /home/ubuntu/.byobu/prompt   #byobu-prompt#
-cd /srv/livegrep
 
 byobu
 . /home/vagrant/.ask_creds.sh
