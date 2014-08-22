@@ -5,6 +5,8 @@ alias gc='git commit -am'
 alias gs='git status'
 alias gd='git diff'
 alias gl='git log'
+alias gk='git log --graph --oneline --decorate --boundary --all HEAD'
+alias gpush='git push'
 
 # shorthand
 alias lp='ls --color=always | grep -P "^((?!\.).)*$|\.py$|\.coffee$|\.sh$" --color=never | column'
