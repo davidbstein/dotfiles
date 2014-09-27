@@ -1,7 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-
+source ~/.bash_profile
 export TERM=xterm-256color
 
 # If not running interactively, don't do anything
@@ -121,3 +121,6 @@ fi
 byobu
 . /home/vagrant/.ask_creds.sh
 . /home/analytics/virtualenv/bin/activate
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
