@@ -122,5 +122,6 @@ byobu
 . /home/vagrant/.ask_creds.sh
 . /home/analytics/virtualenv/bin/activate
 
+for i in $(ls /etc/profile.d/); do source /etc/profile.d/$i; done
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
