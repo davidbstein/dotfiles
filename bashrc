@@ -125,3 +125,4 @@ byobu
 for i in $(ls /etc/profile.d/); do source /etc/profile.d/$i; done
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$PATH:/Users/stein/arcanist/arcanist/bin/"

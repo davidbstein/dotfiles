@@ -5,7 +5,20 @@ alias gc='git commit -am'
 alias gs='git status'
 alias gd='git diff'
 alias gl='git log'
-alias gk='git log --graph --oneline --decorate --boundary --all HEAD'
+alias gk='git log --graph --oneline --decorate --boundary --all'
+alias gkp='git log --graph --oneline --decorate --boundary --first-parent'
+alias gbn='git branch'
+alias gbc='git checkout'
+alias gbr='git rebase master'
+alias gbh='_branch_name=$(git symbolic-ref -q HEAD);_branch_name=${_branch_name##refs/heads/};_branch_name=${_branch_name:-HEAD};git checkout master; git pull --rebase; echo $_branch_name; git checkout $_branch_name; git rebase master;gk|head;'
+gkh(){
+git log --graph --pretty=format:"%C(yellow)%h%C(white) %ad %ae %x09%d %x09%s" --date=short | head |awk 'BEGIN {FS="\t"};{print substr($1"                           ", 0, 60), $2, $3}'
+}
+
+gkph(){
+git log --first-parent --graph --pretty=format:"%C(yellow)%h%C(white) %ad %ae %x09%d %x09%s" --date=short | head |awk 'BEGIN {FS="\t"};{print substr($1"                           ", 0, 60), $2, $3}'
+}
+
 alias gpush='git push'
 
 # shorthand
