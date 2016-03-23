@@ -118,11 +118,12 @@ if ! shopt -oq posix; then
 fi
 [ -r /home/ubuntu/.byobu/prompt ] && . /home/ubuntu/.byobu/prompt   #byobu-prompt#
 
-byobu
+#byobu
 . /home/vagrant/.ask_creds.sh
 . /home/analytics/virtualenv/bin/activate
 
 for i in $(ls /etc/profile.d/); do source /etc/profile.d/$i; done
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="$PATH:/Users/stein/arcanist/arcanist/bin/"
+export PATH="$PATH:/Users/stein/arcanist/bin"
+export TZ="UTC"
