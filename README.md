@@ -12,3 +12,6 @@ Don't use this. It's just for me.
  - check out repo in home directory
  - run `setup.sh`
  - forget this thing exists
+
+ - when you get a new computer run `git add . ; git commit -m 'incremental'` on every box and deal with the horrible merge conflicts
+ - forget this thing exists again.
