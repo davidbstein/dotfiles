@@ -1,3 +1,5 @@
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
 
 # git shorthand
 alias gp='git pull --rebase'
@@ -34,4 +36,5 @@ ccat() {
 }
 
 alias grl='gr | less'
+PATH="$PATH:~/bin"
 source ~/.extra_aliases
