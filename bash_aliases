@@ -35,6 +35,10 @@ ccat() {
        pygmentize -g $1 | nl -ba
 }
 
+giffify(){
+  ffmpeg -i $1 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > $2
+}
+
 alias grl='gr | less'
 PATH="$PATH:~/bin"
 source ~/.extra_aliases

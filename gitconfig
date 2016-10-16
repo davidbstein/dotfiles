@@ -13,3 +13,11 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[branch "master"]
+	rebase = true
+[branch]
+	autosetuprebase = always
+[core]
+	ignorecase = false
+[color]
+	ui = true
