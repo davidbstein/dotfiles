@@ -42,5 +42,8 @@ Crap to install
    - woo
  - [brew](brew.sh)
  - [1password](https://agilebits.com/downloads)
- 
+ - [sublime text](https://www.sublimetext.com/)
+   - run "install package control"
+   - add the [`subl`](https://www.sublimetext.com/docs/2/osx_command_line.html) command
+   - TODO: get a list of packages I use.
  
