@@ -15,3 +15,32 @@ Don't use this. It's just for me.
 
  - when you get a new computer run `git add . ; git commit -m 'incremental'` on every box and deal with the horrible merge conflicts
  - forget this thing exists again.
+
+
+Crap to install
+===============
+
+ - [setresX](https://www.sendspace.com/file/mef6sk)
+ - [chrome](http://google.com)
+ - [karabineR](https://pqrs.org/osx/karabiner/)
+   - [arrow keys to home/end/pgup/pgdwn](https://www.dropbox.com/home/documents/Karabiner?preview=private.xml)
+   - VI MODE -> COmmand_L+hjkl to L/D/U/R
+   - Key Repeat -> 250ms delay, 27ms repeat rate
+ - keyboard settings
+   - use standard function keys
+   - caps lock -> control(^)
+ - [dropbox](http://dropbox.com)
+ - get your ssh keys from the secret place where they are and put them in .ssh
+   - ssh-add them
+   - put them in the OSX keyring
+   - the passphrase is the one you set up while at dropbox for your rsa keys.
+ - [iterm2](https://www.iterm2.com/downloads.html)
+   - infinite scrollback
+   - hotkey window and profile
+   - install this repo
+ - [divvy](https://itunes.apple.com/us/app/divvy-window-manager/id413857545?mt=12)
+   - woo
+ - [brew](brew.sh)
+ - [1password](https://agilebits.com/downloads)
+ 
+ 
