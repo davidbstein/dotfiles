@@ -30,6 +30,7 @@ Crap to install
    - use standard function keys
    - caps lock -> control(^)
  - [dropbox](http://dropbox.com)
+   - `cd; ln -s "Dropbox/repo_folder" .; ln -s "Dropbox/repos" .;cd -`
  - get your ssh keys from the secret place where they are and put them in .ssh
    - ssh-add them
    - put them in the OSX keyring
