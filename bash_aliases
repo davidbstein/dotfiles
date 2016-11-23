@@ -39,7 +39,6 @@ giffify(){
   ffmpeg -i $1 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > $2
 }
 
-ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
 alias grl='gr | less'
 PATH="$PATH:~/bin"
 source ~/.extra_aliases
