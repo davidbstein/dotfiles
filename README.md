@@ -48,4 +48,6 @@ Crap to install
    - run "install package control"
    - add the [`subl`](https://www.sublimetext.com/docs/2/osx_command_line.html) command
    - TODO: get a list of packages I use.
- 
+ - python
+   - pip
+   - jupyter
