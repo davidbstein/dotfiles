@@ -51,3 +51,10 @@ Crap to install
  - python
    - pip
    - jupyter
+   
+   
+# Slack theme
+
+```
+#f0f0f0,#eeeeee,#cccccc,#555555,#dddddd,#555555,#55bb55,#dddddd
+```
