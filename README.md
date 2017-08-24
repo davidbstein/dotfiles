@@ -1,3 +1,6 @@
+
+> everything is in [Mackup](https://github.com/lra/mackup) now
+
 dotfiles
 ========
 
