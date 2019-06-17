@@ -52,9 +52,16 @@ Crap to install
    - add the [`subl`](https://www.sublimetext.com/docs/2/osx_command_line.html) command
    - TODO: get a list of packages I use.
  - python
-   - pip
+   - pipenv
    - jupyter
-   
+ - fish
+   - OMF
+     - autojump, fish-spec omf
+     - lambda theme
+   - fisher
+     - fzf
+     - get
+     - getopts
    
 # Slack theme
 
