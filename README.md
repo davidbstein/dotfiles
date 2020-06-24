@@ -1,6 +1,16 @@
 
 > everything is in [Mackup](https://github.com/lra/mackup) now
 
+How to use Nikon D3300 as a webcam
+=======
+(works with any camera that gphoto2 understands)
+
+Blog posts and stackoverflow all recommend `gst-launch` or `v4l2sink`, both of which have compatability issues with chrome and firefox and so are not workable options. Use `ffmpeg` instead. because always use `ffmpeg` instead:
+
+```fish
+    gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video0 ; kill (ps aux | grep gphoto | awk '{print $2}')
+```
+
 dotfiles
 ========
 
