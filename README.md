@@ -86,7 +86,7 @@ Blog posts and stackoverflow all recommend `gst-launch` or `v4l2sink`, both of w
 
 There might be a reason to create multiple video loopbacks (e.g. using OBS to manipulate a camera feed). you need to remove v4l from teh kernel and reload it with proper settings: 
 
-```
+```bash
 # remove
 sudo modprobe -r v4l2loopback 
 # add
