@@ -84,3 +84,12 @@ Blog posts and stackoverflow all recommend `gst-launch` or `v4l2sink`, both of w
     gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video0 ; kill (ps aux | grep gphoto | awk '{print $2}')
 ```
 
+There might be a reason to create multiple video loopbacks (e.g. using OBS to manipulate a camera feed). you need to remove v4l from teh kernel and reload it with proper settings: 
+
+```
+# remove
+sudo modprobe -r v4l2loopback 
+# add
+sudo modprobe v4l2loopback devices=3 video_nr=0 card_label="USB Cam" exclusive_caps=1  video_nr=10 card_label="OBS Cam" exclusive_caps=1 
+# /creates /dev/video{0,10,1}. "exclusive caps" is needed for Chrome interop. no idea why.
+```
