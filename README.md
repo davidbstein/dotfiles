@@ -93,3 +93,36 @@ sudo modprobe -r v4l2loopback
 sudo modprobe v4l2loopback devices=3 video_nr=0 card_label="USB Cam" exclusive_caps=1  video_nr=10 card_label="OBS Cam" exclusive_caps=1 
 # /creates /dev/video{0,10,1}. "exclusive caps" is needed for Chrome interop. no idea why.
 ```
+
+How to set the mac touchbar to do different things for different apps
+------------------
+Add each relevant app in settings > keyboard > shortcuts
+
+get the app names and current settings using
+```bash
+defaults read com.apple.touchbar.agent
+```
+
+There are four settings: 
+- `app` uses the app's control strip (if available)
+- `functionKeys` uses f1, f2, f3...
+- `fullControlStrip` uses whatever defaults you've set up
+- option 4 is about third party apps and I don't care.
+
+Here are the relevant commands
+```bash
+# change app-specific setting (e.g., use Word's custom touchbar)
+defaults write com.apple.touchbar.agent PresentationModePerApp -dict-add com.microsoft.Word app
+
+# change `fn` key behavior for apps with their own custom touchbar
+defaults write com.apple.touchbar.agent PresentationModeFnModes -dict-add appWithControlStrip app
+defaults write com.apple.touchbar.agent PresentationModeFnModes -dict-add fullControlStrip functionKeys
+
+# change global behavior
+defaults write com.apple.touchbar.agent PresentationModeGlobal fullControlStrip
+```
+
+Kill the touchbar agent so the daemon restarts it:
+```bash
+pkill "Touch Bar agent"; killall "ControlStrip";
+```
