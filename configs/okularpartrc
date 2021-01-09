@@ -1,4 +1,5 @@
 # this sets the highlights and hotkeys in okular, my preferred linux highlighting app, for highlighting legal opinions
+# ~/.config/okularpartrc
 
 [PageView]
 EditToolBarPlacement=1
