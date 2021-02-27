@@ -26,7 +26,6 @@ Important Utilities:
  * PDFExpert
  * Microsoft Office
  * Sublime
- * Setapp: (Ulysses, 
  * duet
  * divvy 
     * download from website, not app store. Seach gmail for "License for Mizage Order" to find licence.
@@ -45,10 +44,16 @@ Important Utilities:
 Settings:
   * preferences -> keyboard -> modifier keys -> capslock to control
   * preferences -> desktop -> (hot corner to mission control, screen saver off)
-  
+
   * firefox -> about:config -> (pdfjs.defaultZoomValue=100%; pdfjs.scrollModeOnLoad=2;pdfjs.spreadModeOnLoad=0)
-  
+
+
 TODO:
  * default shell
- * 
-  
+
+More Installs:
+ * Timeular
+ * Setapp
+   * Ulysses
+   * Forklift
+   * Paw
