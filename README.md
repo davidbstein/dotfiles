@@ -53,6 +53,9 @@ TODO:
 
 More Installs:
  * Timeular
+ * aText (seach "Your aText Delivery" for license code)
+ * `brew install easy-move-plus-resize` (alt+cmd, middle click resize)
+ * fliqlo screensaver
  * Setapp
    * Ulysses
    * Forklift
