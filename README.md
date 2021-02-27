@@ -46,7 +46,7 @@ Settings:
   * preferences -> keyboard -> modifier keys -> capslock to control
   * preferences -> desktop -> (hot corner to mission control, screen saver off)
   
-  * firefox -> about:config -> (pdfjs.defaultZoomValue=100%; pdfjs.spreadModeOnLoad=1)
+  * firefox -> about:config -> (pdfjs.defaultZoomValue=100%; pdfjs.scrollModeOnLoad=2;pdfjs.spreadModeOnLoad=0)
   
 TODO:
  * default shell
