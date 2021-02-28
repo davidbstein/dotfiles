@@ -60,3 +60,11 @@ More Installs:
    * Ulysses
    * Forklift
    * Paw
+
+ * pdfCropMargins
+```
+brew install ghostscript
+brew install poppler
+brew install llvm
+pip3 install pdfCropMargins[gui] --user --upgrade
+```
