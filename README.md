@@ -1,3 +1,7 @@
+# useful functions
+
+[link](useful_functions.md)
+
 # Guide to setting up a new computer
 
 ## the old way (2018)
