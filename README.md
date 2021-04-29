@@ -1,6 +1,7 @@
 # Mac config tricks
 
 Any time I have to figure out how to do something, I try to remember to put it here.
+
 [link](mac_config_tricks.md)
 
 # useful functions
