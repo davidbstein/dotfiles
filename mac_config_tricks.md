@@ -4,9 +4,9 @@
 
 ### Hotkeys:
 
- - **hidden files** `cmd + shift + .`
-
-
+ - **hidden files** `⌘⇪.`
+ - holding ⌥ while looking at the menus will show extra options and locations.
+ - **GOTO** `⌘⇪g`
 ## Firefox Config stuff
 
 ### adding customization
