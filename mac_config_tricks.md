@@ -9,12 +9,12 @@
  - Don't use raw commands, use `view.run_command`
    - there's a decent list of available commands [here](https://sublime-text-unofficial-documentation.readthedocs.io/en/sublime-text-3/reference/commands.html)
   
-```
-// get current open tab
+```python
+# get current open tab
 view = sublime.active_window().active_view()
-// wrap "insert at cursor" function
+# wrap "insert at cursor" function
 insert_fn = lambda s: view.run_command("insert", {"characters": s})
-// insert some text
+# insert some text
 [insert_fn(f"test: {x}\n") for x in range(4)]
 ```
 
