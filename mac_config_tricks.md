@@ -1,13 +1,53 @@
 # Mac Config Tricks
 
+## Sublime
+
+<details><summary>basic sublime usage</summary>
+
+ - there is a python console at `` ctrl+` ``
+ - API reference is [here](https://www.sublimetext.com/docs/3/api_reference.html)
+ - Don't use raw commands, use `view.run_command`
+   - there's a decent list of available commands [here](https://sublime-text-unofficial-documentation.readthedocs.io/en/sublime-text-3/reference/commands.html)
+  
+```
+// get current open tab
+view = sublime.active_window().active_view()
+// wrap "insert at cursor" function
+insert_fn = lambda s: view.run_command("insert", {"characters": s})
+// insert some text
+[insert_fn(f"test: {x}\n") for x in range(4)]
+```
+
+
+</details>
+
+## Karabiner
+
+Karabiner-Elements is how my keyboard works at all without kiling my fingers.
+Karabiner-EventViewer is like `xev` for mac, but better.
+
+<details><summary>Karabiner</summary>
+
+- [Genesy's complex rule generator](https://genesy.github.io/karabiner-complex-rules-generator/) is a good how-to for making rules.
+- Rules go to `~/.config/karabiner/assets/complex_modifications/<whatever>.json`
+- Karabiner finds them pretty easily.
+
+</details>
+
 ## Finder
+<details><summary>Finder</summary>
 
 ### Hotkeys:
 
  - **hidden files** `⌘⇪.`
  - holding ⌥ while looking at the menus will show extra options and locations.
  - **GOTO** `⌘⇪g`
+
+</details>
+
 ## Firefox Config stuff
+
+<details><summary>firefox</summary>
 
 ### adding customization
 
@@ -64,7 +104,6 @@ document.body.append(s)
 ```
 
 </details>
-
 
 
 ### pdf settings
@@ -148,4 +187,5 @@ html[dir="ltr"] .treeItemToggler::before {
 }
 
 ```
+</details>
 </details>
