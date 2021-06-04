@@ -1,5 +1,18 @@
 # Mac Config Tricks
 
+## PDF stuff
+
+<details><summary>tools for manipulating pdfs</summary>
+
+ ```
+brew install mupdf-tools # this is kind of the bottom of every dependancy chain
+```
+check out `pdf.js`. I should add more to this
+
+python's `PyMuPDF` seems to be the most well-maintained on that front.
+
+</details>
+
 ## Sublime
 
 <details><summary>basic sublime usage</summary>
