@@ -35,7 +35,7 @@ First round of config:
 Important Utilities:
  * PDFExpert
  * Microsoft Office
- * Sublime
+ * Sublime (`sudo ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/`)
  * duet
  * divvy 
     * download from website, not app store. Seach gmail for "License for Mizage Order" to find licence.
