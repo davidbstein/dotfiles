@@ -1,0 +1,217 @@
+/* firefox userChrome tweaks */
+
+ 
+/** don’t space pages so far apart on my law-firm-provided low-rez screen */
+.pdfViewers.scrollWrapped #viewer .page {
+margin: 0px;
+margin-left: -12px;
+margin-right: 0;
+}
+ 
+/** fix highlight visibility */
+.pdfViewer .textLayer .highlight {
+border: 2px solid black;
+box-shadow: 0px 0px 8px 8px black;
+}
+ 
+/** screws up layout but fixed busted copy/paste issue */
+.pdfViewer.scrollHorizontal, .pdfViewer.scrollWrapped, .spread {
+text-align: left !important;
+}
+ 
+ 
+CSS Fixes for Windows Firefox
+ 
+ 
+/**
+* Most of the UI modifications come from https://www.reddit.com/r/FirefoxCSS/comments/a9vgxl/minimalist_theme/ by u/griam
+:root {
+  background: transparent !important;
+ 
+  --urlbar-bg: transparent;
+  --urlbar-border-color: transparent;
+}
+@namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+*/
+ 
+/* Slightly darker separator between UI and content in light mode */
+html:not([lwthemetextcolor="bright"]) #navigator-toolbox {
+  --chrome-content-separator-color: rgba(0, 0, 0, 0.2);
+}
+ 
+/* Hide the arrow of the overflow menu box when customizing since it's too far from its target to not look weird */
+#customization-panelWrapper .panel-arrow {
+  display: none !important;
+}
+ 
+/* Hide border of the menu button on the right */
+#PanelUI-button {
+  border: none !important;
+}
+ 
+/* Tab borders stuff */
+.tabbrowser-tab::after,
+.tabbrowser-tab::before {
+  border: none !important;
+  color: grey !important;
+  opacity: 0.2 !important;
+}
+ 
+.tabbrowser-tab[visuallyselected="true"] {
+  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.33);
+}
+ 
+/* Remove line above tabs */
+.tab-line {
+  display: none !important;
+}
+ 
+/* Hide background of urlbar */
+/**
+#urlbar > #urlbar-background {
+  opacity: 0;
+}
+*/
+ 
+/* Slightly transparent background for urlbar when opened */
+#urlbar[open="true"] > #urlbar-background {
+  opacity: 1 !important;
+  background: transparent !important;
+  backdrop-filter: blur(10px) !important;
+  overflow: hidden;
+  position: relative;
+  border-color: var(--urlbar-border-color) !important;
+}
+ 
+#urlbar[open="true"] > #urlbar-background::after {
+  content: '';
+  background: var(--urlbar-bg);
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+ 
+/* Reduce size of text in urlbar */
+#urlbar,
+.searchbar-textbox,
+#urlbar:hover,
+.searchbar-textbox:hover {
+  font-size: 1.1em !important;
+}
+ 
+/* Hide bookmark button, page actions, security labels and extension icons */
+#star-button-box, /* Bookmark button */
+#pageActionButton,
+#blocked-permissions-container,
+#identity-icon-labels,
+#extension-icon {
+  display: none !important;
+  background: transparent !important;
+}
+ 
+/* Hide the bookmarks bar */
+#PersonalToolbar {
+  display: none !important;
+}
+ 
+/* Hide titlebar spaces */
+.titlebar-spacer {
+  display: none;
+}
+ 
+/* Put tabs below the nav bar. */
+#titlebar {
+  -moz-box-ordinal-group: 1 !important;
+}
+ 
+/* Put nav bar above the tab bar and make a space for traffic lights. */
+#nav-bar {
+  -moz-box-ordinal-group: 0 !important;
+  padding-left: 75px !important;
+}
+ 
+/* Hide reader mode button until active  */
+#reader-mode-button {
+  opacity: 0 !important;
+  visibility: collapse !important;
+}
+#reader-mode-button[readeractive="true"] {
+  opacity: 1 !important;
+ visibility: visible !important;
+}
+ 
+/* Hide separator between address bar and right menu */
+#pageActionSeparator {
+  opacity: 0 !important;
+  margin-right: 2px !important;
+  margin-left: 2px !important;
+}
+ 
+/* Move traffic lights in the space carved above. */
+.titlebar-buttonbox-container {
+  position: absolute;
+  display: block;
+  margin-top: -25px;
+}
+ 
+/* Make the back button look like a regular button */
+#back-button > .toolbarbutton-icon {
+  --backbutton-background: transparent;
+  --backbutton-hover-background: var(--toolbarbutton-hover-background);
+  --toolbarbutton-inner-padding: 6px !important;
+  border: none !important;
+  padding: var(--toolbarbutton-inner-padding) !important;
+  border-radius: var(--toolbarbutton-border-radius) !important;
+  width: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
+  height: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
+}
+ 
+/* Remove padding from context navigation icons in right-click menu */
+#context-navigation {
+  margin-top: -4px !important;
+}
+ 
+/* Make icons before urlbar slightly smaller */
+.sharing-icon,
+#identity-icon,
+#permissions-granted-icon,
+#tracking-protection-icon,
+.notification-anchor-icon,
+#blocked-permissions-container > .blocked-permission-icon {
+  width: 14px !important;
+  height: 14px !important;
+}
+ 
+ 
+/* Allows for a subtle gradient behind tabs */
+#TabsToolbar {
+  position: relative;
+  z-index: 1;
+  background: var(--backbutton-background);
+}
+#TabsToolbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+ 
+ 
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar > .toolbar-items {
+  opacity: 0;
+  pointer-events: none;
+}
+ 
+#main-window:not([tabsintitlebar="true"]) #TabsToolbar {
+    visibility: collapse !important;
+}
+ 
+#titlebar {
+  display:none !important;
+}
