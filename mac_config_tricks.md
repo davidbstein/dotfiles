@@ -1,5 +1,13 @@
 # Mac Config Tricks
 
+## quick fish stuff
+
+```fish
+brew install broot bat tree fd fzf gh
+# fisher
+# fisher install PatrickF1/fzf.fish  # decent fzf integration for fish
+```
+
 ## PDF stuff
 
 <details><summary>tools for manipulating pdfs</summary>
