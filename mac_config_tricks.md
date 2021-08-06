@@ -3,9 +3,17 @@
 ## quick fish stuff
 
 ```fish
-brew install broot bat tree fd fzf gh
+brew install broot fd fzf gh
 # fisher
 # fisher install PatrickF1/fzf.fish  # decent fzf integration for fish
+```
+
+## Command line usefulness
+
+```fish
+brew install bat  # cat with syntax highlights
+brew install tree # folder tree
+brew install grep # OSX default grep doesn't support perl syntax, wtf.
 ```
 
 ## PDF stuff
