@@ -19,3 +19,10 @@ A weird mishmash of mac and ubuntu stuff. 10 years of collected configs, updated
 ## Mac Mini (2021) initial setup:
 
 [link](logs/mac_mini_2021.md)
+
+## Windows Computers for work (2021)
+
+[firefox](firefox.md)
+[autohotkey](autohotkey.md)
+[aText](aText.md)
+[poweerToys](powerToys.md)
