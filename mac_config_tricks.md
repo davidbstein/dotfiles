@@ -20,7 +20,7 @@ brew install grep # OSX default grep doesn't support perl syntax, wtf.
 
 ```fish
 brew install pyenv
-brew install --case microconda
+brew install --cask microconda
 fisher bmcfee/fish-conda
 ```
 
