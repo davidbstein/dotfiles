@@ -5,6 +5,7 @@
 ```fish
 brew install broot fd fzf gh
 # fisher
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 # fisher install PatrickF1/fzf.fish  # decent fzf integration for fish
 ```
 
@@ -14,6 +15,13 @@ brew install broot fd fzf gh
 brew install bat  # cat with syntax highlights
 brew install tree # folder tree
 brew install grep # OSX default grep doesn't support perl syntax, wtf.
+```
+## python env management
+
+```fish
+brew install pyenv
+brew install --case microconda
+fisher bmcfee/fish-conda
 ```
 
 ## PDF stuff
