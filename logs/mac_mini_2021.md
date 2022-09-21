@@ -25,6 +25,8 @@ Important Utilities:
     * to migrate - go to an old computer and visit divvy://export - then visit the resulting URL on the new machine.
     * start at login, cycle between screens, global shortcut ^(opt)N.
  * brew install fish
+   * install [ohmyfish](https://github.com/oh-my-fish/oh-my-fish)
+   * `omf install lambda`
  * brew install emacs
  
  REBOOT
