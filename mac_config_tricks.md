@@ -100,6 +100,7 @@ Find your profile folder:
 **CSS**
   - find `$PROFILE_FOLDER/chrome/userContent.css` - it will reload every time you restart Firefox and runs at the **browser** level
 
+
 **javascript**
   - my solution here sucks, requires reloading every browser refresh. There's a WONTFIX on this, which is frustrating.
   - create an addon. An addon is:
@@ -162,8 +163,146 @@ for more info see @mozilla
 #### UI
 
 <details><summary>CSS</summary>
- 
+
 ```css
+/*userChrome.css*/
+:root {
+ --tab-toolbar-navbar-overlap: 0px !important; /* fix for full screen mode */
+ --tab-min-height: 25px !important;
+}
+:root #tabbrowser-tabs {
+ --tab-min-height: 25px !important;
+}
+#TabsToolbar {
+  height: var(--tab-min-height) !important;
+}
+.bookmark-item .toolbarbutton-icon {
+  display: none;
+}
+
+.toolbarbutton-icon[type="menu"] {
+    display: block;
+}
+
+.tab-throbber-tabslist, .tab-throbber, .tab-icon-pending, .tab-icon-image, .tab-sharing-icon-overlay, .tab-icon-overlay {
+    height: 8px;
+    width: 8px;
+}body {
+  border: 1px solid var(--mid-way-color);
+  background-color: var(--dark-accent);
+  color: var(--light-accent-color);
+}
+
+h1 {
+  border-bottom: 1px solid var(--light-accent-color);
+}
+
+body > table > tbody > tr:hover {
+  outline: 1px solid var(--mid-way-color);
+}
+
+```
+
+```css
+/*ALTERNATIVE userContent.css*/
+
+/**
+ * CSS TWEAKS FOR pdf.js PDF VIEWER
+ * Basic structure:
+ *
+ *    #outerContainer
+ *    ├── #mainContainer
+ *    │   ├── #toolbar
+ *    │   └── #viewerContainer
+ *    │       └── #viewer .pdfViewer[.scrollWrapped]
+ *    │           └── .page
+ *    ├── #sidebarContainer
+ *    │   ├── #toolbarSidebar
+ *    │   └── #sidebarContent
+ *    │       ├── #thumbnailView
+ *    │       ├── #outlineView
+ *    │       │   ├── .treeItem
+ *    │       │   │    ├── .treeItem
+ *    ..........................
+ *    │       │   │    └── .treeItem
+ *    │       │   └── .treeItem
+ *    │       ├── #attachmentsView
+ *    │       └── #layersView
+ *    └── #sidebarResizer
+ */
+html[dir="ltr"] .pdfViewer.scrollWrapped #viewer .page {
+  margin: 0px;
+  margin-left: -12px;
+  margin-right: 0;
+}
+
+html[dir="ltr"] .pdfViewer .page {
+    margin: 5px auto -3px auto !important;
+    border: 1px solid gray !important;
+}
+
+html[dir="ltr"] .treeWithDeepNesting > .treeItem,
+html[dir="ltr"] .treeItem > .treeItems {
+    margin-left: -5px !important;
+    border-left: 1px solid #444;
+    padding-left: 15px !important;
+}
+
+html[dir="ltr"] .treeItem > a {
+    max-height: 2em;
+    overflow: hidden;
+    margin: -4px 0 0 0 !important;
+    border-bottom: 1px solid black;
+    text-overflow: ellipsis;
+    white-space: nowrap !important;
+}
+
+html[dir="ltr"] .treeItemToggler::before {
+    right: -2px !important;
+    top: -2px;
+}
+
+html[dir="ltr"] #sidebarContent,
+html[dir="ltr"] #outlineView,
+html[dir="ltr"] #attachmentsView,
+html[dir="ltr"] #layersView {
+  overflow-x: scroll !important;
+}
+
+html[dir="ltr"] .spread .page,
+html[dir="ltr"] .pdfViewer.scrollHorizontal .page,
+html[dir="ltr"] .pdfViewer.scrollWrapped .page,
+html[dir="ltr"] .pdfViewer.scrollHorizontal .spread,
+html[dir="ltr"] .pdfViewer.scrollWrapped .spread {
+  vertical-align: top !important;
+}
+
+
+html[dir="ltr"] #outerContainer #sidebarContainer #sidebarContent #outlineView > .treeItem {
+  font-weight: bold;
+  padding: 0 !important;
+  margin-bottom: 0px !important;
+  margin-top: 1em !important;
+  padding-left: 15px !important;
+}
+
+
+html[dir="ltr"] #outerContainer #sidebarContainer #sidebarContent #outlineView .treeItem .treeItem {
+  font-weight: normal;
+  margin: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 0em;
+}
+
+html[dir="ltr"] #outerContainer #sidebarContainer #sidebarContent #outlineView .treeItem > a {
+  line-height: 1em;
+}
+
+```
+
+```css
+/*userContent.css*/
 /**
  * CSS TWEAKS FOR pdf.js PDF VIEWER
  * Basic structure:
@@ -187,7 +326,7 @@ for more info see @mozilla
  *    │       └── #layersView
  *    └── #sidebarResizer
  */
- // TODO: this css is not sufficiently guarded against attaching when it shouldn't!
+ /* TODO: this css is not sufficiently guarded against attaching when it shouldn't!*/
 .pdfViewer.scrollWrapped #viewer .page {
   margin: 0px;
   margin-left: -12px;
@@ -224,5 +363,4 @@ html[dir="ltr"] .treeItemToggler::before {
 }
 
 ```
-</details>
 </details>
