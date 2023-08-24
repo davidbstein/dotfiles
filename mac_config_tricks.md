@@ -96,6 +96,7 @@ Karabiner-EventViewer is like `xev` for mac, but better.
 Find your profile folder:
  - found by clicking "Profile Folder" in `about:support` (unlinkable - type `about:support` into the address bar)
  - Likely in `~/Library/Application\ Support/Firefox/Profiles/*/chrome/userContent.css` (you may need to create it)
+ - turn on user css setting with `about:config` `toolkit.legacyUserProfileCustomizations.stylesheets = TRUE`
 
 **CSS**
   - find `$PROFILE_FOLDER/chrome/userContent.css` - it will reload every time you restart Firefox and runs at the **browser** level
@@ -364,4 +365,4 @@ html[dir="ltr"] .treeItemToggler::before {
 
 ```
 </details>
-<details>
+</details>
