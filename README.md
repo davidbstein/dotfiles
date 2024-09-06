@@ -26,3 +26,12 @@ A weird mishmash of mac and ubuntu stuff. 10 years of collected configs, updated
 [autohotkey](autohotkey.md)
 [aText](aText.md)
 [poweerToys](powerToys.md)
+
+
+## jupyter lab autoreload
+
+~/.ipython/profile_default/ipython_config.py
+```
+c.InteractiveShellApp.exec_lines.append('%load_ext autoreload')
+c.InteractiveShellApp.exec_lines.append('%autoreload 2')
+```
