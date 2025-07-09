@@ -28,6 +28,8 @@ Important Utilities:
  * brew install fish
    * install [ohmyfish](https://github.com/oh-my-fish/oh-my-fish)
    * `omf install lambda`
+   * `echo $(which fish) >> /etc/shells`
+   * `cshs -s $(which fish)`
  * brew install emacs
  
  REBOOT
@@ -45,7 +47,6 @@ Settings:
 
 
 TODO:
- * default shell
 
 More Installs:
  * Timeular
