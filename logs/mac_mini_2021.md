@@ -9,6 +9,7 @@ _also followed (mostly) for macbook)_
   * Dropbox.
   * 1password.
   * homebrew.
+  * uv
 
 First round of config:
  * `brew install mackup`
