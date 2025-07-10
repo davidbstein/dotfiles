@@ -23,7 +23,7 @@ Important Utilities:
    * `cshs -s $(which fish)`
  * divvy 
     * download from website, not app store. Seach gmail for "License for Mizage Order" to find licence.
-    * to migrate - go to an old computer and visit divvy://export - then visit the resulting URL on the new machine.
+    * to migrate - go to an old computer and visit divvy://export - then visit the resulting URL on the new machine. Or visit the link in the email thread.
     * start at login, cycle between screens, global shortcut ^(opt)N.
  * `yes Yes | mackup restore`
     * if `~/.mackup.cfg` doesn't have an `[applications to ignore]` entry from iterm, break simlink to mackup in iTerm settings `rm Library/Preferences/com.googlecode.iterm2.plist`,
